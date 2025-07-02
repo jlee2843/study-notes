@@ -1,1 +1,84 @@
-<meta http-equiv="Refresh" content="0; url=intro.html" />
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Enter Passcode</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #f7f8fc, #dbe9f4);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background-color: #ffffff;
+      padding: 2rem 3rem;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      max-width: 400px;
+      width: 90%;
+    }
+
+    h2 {
+      margin-bottom: 1.5rem;
+      color: #333;
+    }
+
+    input[type="password"] {
+      width: 100%;
+      padding: 0.75rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin-bottom: 1rem;
+      box-sizing: border-box;
+    }
+
+    button {
+      width: 100%;
+      padding: 0.75rem;
+      font-size: 1rem;
+      background-color: #3477db;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #245eb8;
+    }
+
+    .note {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: #888;
+    }
+  </style>
+  <script>
+    function checkPasscode() {
+      var pass = document.getElementById("pass").value;
+      if (pass === "3939") {
+        window.location.href = "book/index.html";
+      } else {
+        alert("❌ Incorrect passcode. Try again.");
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h2>🔒 Protected Notes</h2>
+    <input type="password" id="pass" placeholder="Enter passcode" />
+    <button onclick="checkPasscode()">Access Book</button>
+    <div class="note">Hint: Access is limited to authorized users</div>
+  </div>
+</body>
+</html>
