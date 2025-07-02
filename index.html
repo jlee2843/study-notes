@@ -1,0 +1,23 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Enter Passcode</title>
+  <script>
+    function checkPasscode() {
+      var pass = document.getElementById("pass").value;
+      if (pass === "3939") {
+        window.location.href = "book/index.html";
+      } else {
+        alert("Wrong passcode");
+      }
+    }
+  </script>
+</head>
+<body>
+  <h2>Enter Passcode to View Notes</h2>
+  <input type="password" id="pass" placeholder="Enter passcode" />
+  <button onclick="checkPasscode()">Submit</button>
+</body>
+</html>
